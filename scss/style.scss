@@ -1,0 +1,244 @@
+@import "normalize.scss";
+@import "layout.scss";
+@import "slick";
+//@import "slick-theme";
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600,700');
+
+$text-color: #333;
+$primary-color: #FFCC00;
+$body-font: 'Poppins', sans-serif;
+$header-font: Roboto, sans-serif;
+
+body{
+	font-family: 'Poppins', sans-serif;
+	color:  #303030;
+	font-size: 18px;/* Приближение из-за подстановки шрифтов */
+	font-weight: 600;
+	line-height: 19.17px;/* Приближение из-за подстановки шрифтов */
+	text-align: left;
+}
+
+/* Layout */
+.ba-container{
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 1200px;
+}
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+	font: 700 14px/1.7 OpenSans, sans-serif;
+	height: 24px;
+	color:  #666666;
+	border: 1px solid $primary-color;
+	text-decoration: none;
+	padding: 0 12px 0;
+	max-width: 120px;
+	margin: 0 auto;
+
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+	//background-color: $primary-color;
+	color: #FFF;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}
+
+/* Layout */
+.ba-container{
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 1200px;
+}
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+	font: 700 14px/1.7 OpenSans, sans-serif;
+	height: 24px;
+	color:  #666666;
+	border: 1px solid $primary-color;
+	text-decoration: none;
+	padding: 0 12px 0;
+	max-width: 120px;
+	margin: 0 auto;
+
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+//	background-color: $primary-color;
+	color: #FFF;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}
+
+
+.slick-arrow{
+    border: none;
+    background: none;
+    border-right: 0;
+    padding: 0;
+
+    position: absolute;
+    line-height: 0;
+    font-size: 0;
+    cursor: pointer;
+    top: 50%;
+    margin-top: -21px;
+    outline: none;
+    //color: $primary-color;
+    &:hover{
+      color: #000;
+    }
+    svg{
+      display: block;
+      height: 42px;
+      width: 96px;
+      fill: currentColor;
+    }
+}
+.ba-slider-prev{
+  left: 0;
+}
+.ba-slider-next{
+  right: 0;
+}
+.slick-dots{
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+   margin: 0 0;
+   padding: 0;
+   list-style: none;
+   text-align: center;
+   li{
+     display: inline-block;
+     margin: 0 5px;
+   }
+   button{
+     border: 0;
+     background: transparent;
+     display: block;
+     width: 10px;
+     height: 10px;
+     background-color: #fff;
+     border: 1px solid #fff;
+     padding: 0;
+     border-radius: 50%;
+     outline: none;
+     line-height: 0;
+     font-size: 0;
+     color: transparent;
+     cursor: pointer;
+   }
+   .slick-active{
+     button{
+       background: transparent;
+     }
+   }
+}
+.ba-team .ba-team-slider .ba-slide {
+	margin-left: 44px;
+
+
+}
+
+	.ba-slider-next {
+	  transform-origin: right bottom; /* или 100% 100%, что одно и тоже */
+	  transform:
+	    rotate(90deg)
+	    translate(0, -100%) /* идём от нижнего правого до верхнего правого края */
+	    rotate(90deg)
+	    translate(0, 100%);
+	}
+	.ba-slider{
+		position: relative;
+		overflow: hidden;
+	}
+	.ba-slider:before {
+	    position: absolute;
+	    content: "";
+	    right: 0;
+	    top: 0;
+	    left: 0;
+	    bottom: 0;
+	    background-color: red;
+	    visibility: hidden;
+	    opacity: 0;
+	    -webkit-transition: all .25s;
+	    -o-transition: all .25s;
+	    transition: all .25s;
+	}
+	.ba-slider :hover :before{
+		visibility: visible;
+		opacity: 1;
+		border-radius: 5px;
+
+	}
